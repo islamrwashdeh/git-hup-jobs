@@ -8,13 +8,12 @@ export default function Job({ job }) {
   return (
     <Card className="mb-3">
       <Card.Body>
-
         <div className="d-flex justify-content-between">
           <div>
             <Card.Title>
               {job.title} - <span className="text-muted font-weight-light">{job.company}</span>
             </Card.Title>
-                <Card.Subtitle className="text-muted mb-2">
+            <Card.Subtitle className="text-muted mb-2">
               {new Date(job.created_at).toLocaleDateString()}
             </Card.Subtitle>
             <Badge variant="secondary" className="mr-2">{job.type}</Badge>
@@ -26,7 +25,6 @@ export default function Job({ job }) {
           <img className="d-none d-md-block" height="50" alt={job.company} src={job.company_logo} />
         </div>
         <Card.Text>
-            
           <Button
             onClick={() => setOpen(prevOpen => !prevOpen)}
             variant="primary"
@@ -43,4 +41,3 @@ export default function Job({ job }) {
     </Card>
   )
 }
-
